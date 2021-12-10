@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import SingleCard from './card';
-import moment from 'moment';
+
 import DateRangepicker from './SearchBar/DateRangepicker';
 
 import { getdata } from './Redux/actions/Actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { SearchBar } from './SearchBar/SelectBar';
-import { DateSearch } from './SearchBar/DateSearch';
+
 function Cards() {
 	const home = useSelector(state => state.home);
 	const apiDataList = home?.apiDatList;
@@ -22,7 +22,6 @@ function Cards() {
 		dispatch(getdata());
 	}, []);
 
-	console.log('this is data', FilterData);
 	useEffect(() => {
 		if (Division === apiDataList?.['northern-ireland'].division) {
 			const northernireland = apiDataList?.['northern-ireland']?.events;
@@ -44,7 +43,6 @@ function Cards() {
 				<div style={{ margin: '3px' }}>
 					<SearchBar setDivision={setDivision} apiDataList={apiDataList} />
 				</div>
-				{/* <DateSearch setDateFilter={setDateFilter} /> */}
 
 				<div style={{ margin: '3px' }}>
 					<DateRangepicker setDateFilter={setDateFilter} />
