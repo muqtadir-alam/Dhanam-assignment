@@ -1,0 +1,109 @@
+body {
+  
+  
+  padding: 0;
+  margin: 0;
+  background-color: #425961;
+  color: aliceblue;
+
+  
+  
+  
+  
+  
+
+}
+
+.container{
+ 
+  
+}
+
+
+.heading {
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: darkcyan;
+  background-color:darkolivegreen;
+  
+  border-radius: .3rem;
+  margin-top: 0%;
+
+}
+
+
+
+.searchBar {
+  /* position: fixed; */
+  margin: auto;
+  /* padding: 30px; */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: darkcyan;
+  /* background-color:darkolivegreen; */
+  display: flex;
+  flex-wrap: nowrap;
+  border-radius: .3rem;
+  margin-top: 1%;
+justify-content: center;
+z-index: 50;
+
+
+}
+.cards{
+
+  width: 18rem;
+  float: left;
+ 
+  
+  height: 25rem;
+ 
+ 
+ 
+ margin-left: 1rem;
+ 
+
+}
+
+.cards:hover{
+
+  transition: all 4s;
+  transition-timing-function: ease-in-out;
+  transition: width 2s, height 2s, transform 2s;
+  animation-timing-function: ease-in-out;
+}
+
+
+.card{
+
+transition: all 0,4s cubic-bezier(0.075, 0.82, 0.165, 1);
+background-color: darkcyan;
+
+border-radius: 12px;
+box-shadow: darkcyan;
+
+
+ text-align: center;
+
+}
+
+.card_img{
+
+ width: 18rem;
+ height: 15rem;
+ 
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+
+}
+
+.card_info{
+
+  background-color: darkgray;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  
+}
