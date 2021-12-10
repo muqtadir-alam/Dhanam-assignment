@@ -7,8 +7,6 @@ dotenv.config();
 
 export const userRegister = async (req, res) => {
 	try {
-		// console.log('this is register', req.body);
-
 		const { full_name, email, password } = req.body;
 
 		if (!(email && password && full_name)) {

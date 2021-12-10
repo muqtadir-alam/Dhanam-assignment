@@ -6,8 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export const userLogin = async (req, res) => {
-	// Our register logic starts here
-	// const userData = await User.find({ email: req.body.email });
+	console.log('this login data', req.body);
 	try {
 		User.find({ email: req.body.email })
 			.exec()
@@ -29,7 +28,6 @@ export const userLogin = async (req, res) => {
 						);
 
 						res.status(201).json({ userData: user, auth: token });
-						// console.log('this is auth userdata', user);
 					}
 				});
 			})

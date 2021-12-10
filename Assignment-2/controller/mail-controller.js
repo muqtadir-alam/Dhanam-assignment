@@ -3,9 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 export const GreetMail = async props => {
 	const { full_name, email } = props;
-	console.log('this is full data', props);
-	// Our register logic starts here
-	// const userData = await User.find({ email: req.body.email });
+
 	try {
 		var transporter = mailer.createTransport({
 			service: 'gmail',

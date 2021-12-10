@@ -7,7 +7,6 @@ dotenv.config();
 const checkauth = async (req, res, next) => {
 	try {
 		const token = req.headers.authorization;
-		console.log('this is token', token);
 
 		const varifyToken = jwt.verify(token, process.env.TOKEN_KEY);
 		if (varifyToken) {
