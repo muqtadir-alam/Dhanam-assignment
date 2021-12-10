@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export const userLogin = async (req, res) => {
-	console.log('this login data', req.body);
+	
 	try {
 		User.find({ email: req.body.email })
 			.exec()
